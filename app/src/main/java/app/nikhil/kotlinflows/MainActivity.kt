@@ -14,7 +14,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.launch
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
   private val activityScope = CoroutineScope(Dispatchers.Main)
   private lateinit var binding: ActivityMainBinding
@@ -26,7 +26,6 @@ class MainActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
-    setContentView(binding.root)
 
     // This is just the definition of the flow.
     // It has not started emitting yet.

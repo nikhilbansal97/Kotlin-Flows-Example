@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.add
 import androidx.fragment.app.commit
 import app.nikhil.kotlinflows.databinding.ActivityMainBinding
+import app.nikhil.kotlinflows.itemslist.ItemsListFragment
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     if (savedInstanceState == null) {
       supportFragmentManager.commit {
         setReorderingAllowed(true)
-        add<FlowCollectFragment>(R.id.fragment_container_view)
+        add<ItemsListFragment>(R.id.fragment_container_view)
       }
     }
   }

@@ -2,6 +2,7 @@ plugins {
   id 'com.android.application'
   id 'kotlin-android'
   id 'kotlin-android-extensions'
+  id 'kotlin-kapt'
 }
 
 android {
@@ -36,6 +37,12 @@ android {
   }
 }
 
+ext {
+  coroutines_version = "1.4.2"
+  room_version = "2.2.5"
+  fragments_version = "1.2.5"
+}
+
 dependencies {
 
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -44,10 +51,14 @@ dependencies {
   implementation 'com.google.android.material:material:1.2.1'
   implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
   // Fragments
-  implementation "androidx.fragment:fragment-ktx:1.2.5"
+  implementation "androidx.fragment:fragment-ktx:$fragments_version"
   // Coroutines
-  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2'
-  implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.2'
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
+  // Room Database
+  implementation "androidx.room:room-runtime:$room_version"
+  implementation "androidx.room:room-ktx:$room_version"
+  kapt "androidx.room:room-compiler:$room_version"
   // Testing
   testImplementation 'junit:junit:4.13.1'
   androidTestImplementation 'androidx.test.ext:junit:1.1.2'

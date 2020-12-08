@@ -11,3 +11,7 @@ Practice [Kotlin Flows](https://kotlinlang.org/docs/reference/coroutines/flow.ht
 ## 🚧 Upcoming
 * Use Flow API to filter items in Search feature.
 * Create separate fragments to demonstrate [Flow operators](https://kotlinlang.org/docs/reference/coroutines/flow.html#terminal-flow-operators).
+
+
+
+**⚠ Note: This project doesn't showcase the best practices for other aspects of the app. The only motivation is to try out Kotlin Flow APIs and its operators.**

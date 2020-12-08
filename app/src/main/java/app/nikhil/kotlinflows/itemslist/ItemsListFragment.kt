@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.nikhil.kotlinflows.R.layout
@@ -37,11 +38,9 @@ class ItemsListFragment : Fragment(layout.fragment_flow_collect) {
   }
 
   private fun collectFlow() {
-    lifecycleScope.launchWhenCreated {
-      viewModel.allItemsFlow.collect {
-        itemAdapter.submitList(it)
-      }
-    }
+    viewModel.allItemsFlow.observe(viewLifecycleOwner, {
+      it?.let { items -> itemAdapter.submitList(items) }
+    })
   }
 
   private fun initRecyclerView() {

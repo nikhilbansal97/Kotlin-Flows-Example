@@ -1,6 +1,7 @@
 package app.nikhil.kotlinflows.database
 
 import android.content.Context
+import kotlinx.coroutines.flow.Flow
 
 class FlowRepository private constructor() {
 
@@ -16,6 +17,5 @@ class FlowRepository private constructor() {
     fun getInstance(): FlowRepository = INSTANCE
   }
 
-  fun getAllItems() = database.getItemDao()
-    .getAllItems()
+  fun getAllItems(): Flow<List<Item>> = database.getItemDao().getAllItems()
 }

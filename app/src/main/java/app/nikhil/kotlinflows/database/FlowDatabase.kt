@@ -23,6 +23,10 @@ abstract class FlowDatabase : RoomDatabase() {
               override fun onCreate(db: SupportSQLiteDatabase) {
                 super.onCreate(db)
                 db.execSQL("INSERT INTO item (id, name) VALUES (1, 'Item 1')")
+                db.execSQL("INSERT INTO item (id, name) VALUES (2, 'Item 2')")
+                db.execSQL("INSERT INTO item (id, name) VALUES (3, 'Item 3')")
+                db.execSQL("INSERT INTO item (id, name) VALUES (4, 'Item 4')")
+                db.execSQL("INSERT INTO item (id, name) VALUES (5, 'Item 5')")
               }
             })
             .build()

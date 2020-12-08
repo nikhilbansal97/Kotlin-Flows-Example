@@ -1,11 +1,10 @@
 package app.nikhil.kotlinflows.itemslist
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
 import app.nikhil.kotlinflows.database.FlowRepository
 
-class ItemsListViewModel(application: Application) : AndroidViewModel(application) {
+class ItemsListViewModel : ViewModel() {
 
   private val repository by lazy { FlowRepository.getInstance() }
 

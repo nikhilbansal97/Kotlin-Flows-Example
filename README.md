@@ -5,6 +5,8 @@ Practice [Kotlin Flows](https://kotlinlang.org/docs/reference/coroutines/flow.ht
 
 ## 🌟 Features
 * Using [Room Database](https://developer.android.com/training/data-storage/room) to store sample items.
+* Loading layouts using [constructor](https://developer.android.com/reference/kotlin/androidx/appcompat/app/AppCompatActivity#init_1) for `AppCompatActivity`
+* [New](https://twitter.com/ianhlake/status/1331682563547557888) `Fragments` APIs
 
 ## 🚧 Upcoming
 * Use Flow API to filter items in Search feature.
